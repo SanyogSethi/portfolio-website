@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About me</title>
+
+        <!-- Linking all external elements -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="about.css">
+        <meta name="view-transition" content="same-origin" />
+    </head>
+    <body>
+
+        <!--  Header section -->
+        <header class="header">
+            <a href="index.html" class="logo">Portfolio</a>
+            <i class="bx bx-menu" id="menu-icon" ></i>
+
+            <nav class="navbar">
+                <!-- Setting anchor tags to navigate between various pages and also within various sections in this page  -->
+                <a href="index.html" id="pages" class="nav-anchor">Home</a>
+                <a href="#about" id="pages">About</a>
+                <a href="gallery.html" id="pages" class="nav-anchor">Gallery</a>
+                <a href="#Services">Services&emsp;</a>
+                <a href="#skills">Software Skills</a>
+                <img src="assets/moon.png" alt="DarkMode Toggle" id="icon">
+            </nav>
+
+        </header>
+        
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="about-img"data-aos="fade-left">
+                <img src="assets/about.jpg" alt="My Picture" id="imgOP">
+            </div>
+
+            <div class="about-content"data-aos="slide-left">
+                <!-- Main content -->
+                <h2 class="heading"><span>About </span></h2>
+                <p>Hey, I'm Kasish Thapar, A student in Seneca Polytechnic College, pursuing my Diploma in Interactive Media Design. 
+                    Currently I'm focusing on developing my skills more than those boring theory subjects because at the end, there
+                    would be your skills alone that would help you to stand out in the crowded IT field these days. Currently, I'm focusing 
+                    on skills such as HTML, CSS, JS, Bootstrap etc. Even this website would be a part of my skills development 
+                    journey. I don't know if you would like this website or not, but a positive feedback would be appreciated and even if you 
+                    find any flaws in this website, your valuable feedback would still be awaited. Thanks!
+                </p>
+            </div>
+        </section>
+
+        <!-- projects section -->
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Why <span>hire Me</span></h2>
+
+            <div class="about-content"data-aos="slide-left">
+                <p>Well, I won't say hire me coz nobody else can do what I can. Rather I'd say that nobody else can do that work as efficiently as 
+                    I get my work done. I don't see my work as a load, I take it as my passion and try to get the job done in the least time possible. 
+                    I never let my employer down. Also, I have gained some experience while working on my previous projects mentioned below:
+                </p>
+                <p>
+                    It gives me an edge over my fellow designers.
+                </p>
+            </div>
+
+            <div class="portfolio-container" data-aos="fade-right">
+
+                <div class="portfolio-card">
+                    
+                <img src="assets/skyscope.png" alt="Project3 Picture" data-aos="fade-left">
+                    <div class="portfolio-details"data-aos="fade-left">
+                    <h3>Skyscope: <span>A weather Application</span></h3>
+                    <p>Successfully generated a responsive weather web application that let the user track weather info of his locality. It also has a feature to track current location of the user that can help to find the weather condition without the need to manually fill the location. It offers a very clean user interface and is available in both dark and light modes.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    
+                    <img  src="assets/music.PNG" alt="Project4 Picture" >
+                    <div class="portfolio-details"data-aos="fade-right">
+                    <h3>MeloMix: <span>A music platform</span></h3>
+                    <p>I've created a basic music player website that lets the user play his favourite songs without any interruptions. The user can also download his/her favourite tracks and can also create a playlist, listing all his fav songs and artists.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Services section -->
+        
+        <section id="Services" class="Servicess">
+            <h2><span>Services</span></h2>
+            <br>
+            <!-- Main flex container -->
+            <div id="ServicesContainer">
+                <!-- Various Services cards -->
+                <div class="ServiceList" id="ServiceList"><img src="assets/Camera.jpeg" alt="Camera Artwork"><h2><span>Photography:</span></h2><h3>I have a decent experience in photography.</h3></div>
+                <div class="ServiceList" id="ServiceList2"><img src="assets/Video.jpg" alt="Video Editing Artwork"><h2><span>Video Editing Skills:</span></h2><h3>I can edit videos professional enough for social media platforms.</h3></div>
+                <div class="ServiceList" id="ServiceList3"><img src="assets/OpenSource.png" alt="Open Source"><h2><span>Open Source Contributions:</span></h2><h3>I've made a lot of open source contributions in the past few months.</h3></div>
+                <div class="ServiceList" id="ServiceList4"><img src="assets/animation.avif" alt="Animation artwork"><h2><span>Animation:</span></h2><h3>I use to make some animated movies in my free time.</h3></div>
+            </div>
+        </section>
+        <!-- Skills section  -->
+        <section id="skills" class="services">
+            <div class="ser-title">
+                <h2 class="heading">Software <span>Skills</span></h2>
+            </div>       
+            <div class="services-box" data-aos="fade-left">
+            <div class="box"data-aos="fade-left">            
+                <h2 style="text-align:left;font-size:x-large;color:#fd4766;">Languages &nbsp; &nbsp;</h2>
+                <div>
+                    <!-- Images and descriptions of all languages and technologies -->
+                    <figure class="item" style="display:inline-block;">
+                    <a href="https://www.cprogramming.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/c.svg" alt="C" width="40" height="40" /> </a>
+                    <figcaption style="text-align:center;"><b>C</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <figure class="item" style="display:inline-block;">
+                    <a href="https://www.cplusplus.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/cplusplus.svg" alt="c++" width="40" height="40" /> </a>
+                    <figcaption style="text-align:center;"><b>C++</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+        
+                    
+                    <figure class="item" style="display:inline-block;">
+                    <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40" /> </a>
+                    <figcaption style="text-align:center;"><b>Python</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+        
+        
+                    <figure class="item" style="display:inline-block;">
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" /> </a>
+                    <figcaption style="text-align:center;"><b>JavaScript</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    <figure class="item" style="display:inline-block;">
+                        <a href="https://www.java.com/en/" target="_blank" rel="noreferrer"> <img src="assets/java.svg" alt="Java" width="40" height="40" /> </a>
+                        <figcaption style="text-align:center;"><b>Java</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    </div>
+                </div>
+            </section>
+
+    <!--Footer section -->
+        <footer class="footer">
+            <div class="footer-text">
+
+                <p>Made with <i style="color: red;" class="bx bx-heart"></i> by Kashish Thapar.</p><!-- An unsaid rule to write this at the end. -->
+
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#about"><i class="bx bx-up-arrow-alt"></i></a>
+            </div>
+        </footer>
+
+        <script src="about.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+    </body>
+</html>

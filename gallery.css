@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@font-face{
+    font-family: 'myFont';
+    src: url(assets/RemachineScript_Personal_Use.ttf);
+}/* Importing a font for anchor tags pointing to other pages */
+
+/* Styling some global settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#icon{
+    width:30px;
+    cursor:pointer;
+    margin-left: 4rem;
+    padding-top: 2px;
+}
+/* Setting various font colors to be used while switching between dark and night modes   */
+:root {
+    --bg-color: #fff;
+    --seconde-bg-color: rgba(201, 207, 220, 0.933);
+    --text-color: #000;
+    --main-color: #fd4766;
+    --shadow-color: #808080;
+}
+/* Font and background colors for dark theme  */
+.dark-theme{
+    --text-color:white;
+    --bg-color:black;
+    --seconde-bg-color: rgb(50,45,33);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+} 
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+body.fade-out {
+    opacity: 0;
+}
+/* Fade out effect for page transition*/
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 8% 8% ;
+}
+
+/*****header styling****/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header .sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 650;
+    cursor: pointer;
+}
+/* Navigation bar */
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3;
+}
+/* Font for anchor tags that link to other pages, i.e., homepage and about page */
+#pages{
+    font-family: myFont;
+    font-weight: 20;
+    font-size: 35px;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+span{
+    color: var(--main-color);
+}
+/* Mobile view of navigation bar using burger menu. It's functionality is controlled using js */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+
+    .navbar.active {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s 0s, opacity 0.5s ease-in-out;
+    }
+}
+
+/**********************Gallery main content****************/
+.content{
+    animation: fade-up 0.5s;
+}
+
+.content h2{
+    text-align: center;
+    gap: 8rem;
+    font-weight: 60;
+    font-size: 60px;
+    font-family: myFont;
+}
+/* Grid layout for desktop */
+.container {
+    padding: 7% 5% 100px 5%;
+    height: 160vh;
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    overflow: hidden;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+/* Setting grid spaces for all the ten artworks */
+.one {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.two {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.three {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.four {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+}
+
+.five {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.six {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.seven {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+.eight {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+}
+
+.nine {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+}
+
+.ten {
+    grid-column: 4 / 5;
+    grid-row: 1 / 3;
+}
+
+/* Hiding the info of the artworks using scale 0.001, showing them on mouseover event over a grid item */
+.info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.001);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    font-size: large;
+    font-weight: 500;
+}
+
+.projects {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Class manipulated using javascript on mouseover event */
+/* Scaling the outside container of the item on mouseover event */
+.mouseover {
+    transform: scale(1.08);
+    transition: 0.7s ease;
+}
+/* Scaling image inside container on mouseover */
+.mouseover .items{
+    transform: scale(1.25);
+    transition: 0.7s ease;
+}
+
+/* Showing info of an item when it is hovered over */
+.mouseover .info {
+    opacity: 1;
+    transform: scale(1);
+    cursor: default;
+    transition: 0s;
+}
+
+.items {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: fill;
+    transition: transform 0.7s ease;
+}
+/* Grid layout for mobile device */
+@media only screen and (max-width: 550px) {
+    .content h2 {
+        margin-top: 5rem;
+        place-content: center;
+    }
+    .content {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    section{
+        padding: 10rem 0% 8% ;
+    }
+    /* Creating a new grid layout for mobile devices */
+    .container {
+        height: 650vh;
+        grid-template-columns: 1fr;
+        padding-left: 7%;
+        padding-right: 7%;
+        grid-template-rows: 0.4fr 0.6fr 1fr 0.6fr 0.6fr 1fr 0.6fr 1fr 1fr 1fr;
+        /* A vertical grid layout is created */
+    }
+    /* Setting grid area for all the ten artworks */
+    .one {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .two {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .three {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .four {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    
+    .five {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    
+    .six {
+        grid-row: 6;
+        grid-column: 1;
+    }
+    
+    .seven {
+        grid-row: 7;
+        grid-column: 1;
+    }
+    
+    .eight {
+        grid-row: 8;
+        grid-column: 1;
+    }
+    
+    .nine {
+        grid-row: 9;
+        grid-column: 1;
+    }
+    
+    .ten {
+        grid-row: 10;
+        grid-column: 1;
+    }
+}
+/******footer********/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color: var(--seconde-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+    color:  var(--text-color);
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+/***Keyframes ****/
+@media (max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    .section {
+        padding-top: 10rem;
+        padding-bottom: 2rem;
+    } 
+}
+
+@media (max-width:600px){
+    /* Later  */
+    /* #menu-icon{
+        display: block;
+    } */
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        opacity: 0.9;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    .navbar{
+        display: flex;
+        font-size: 2rem;
+        margin: 0.1rem 0;
+    }
+}
+
+@media (max-width:1048px){
+    .header{
+        font-size: 32px;
+        padding-left:60px;
+    }
+    .navbar a {
+        margin-right:20x; 
+        font-size:17px ;
+    }
+}
+/* Animation for fading in on pageload */
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}

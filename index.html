@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kashish's Portfolio</title>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="index.css">
+        <meta name="view-transition" content="same-origin" />
+    </head>
+
+    <body>
+        
+        <!--  Header -->
+        
+        <header class="header">
+            <a href="index.html" class="logo">Portfolio</a>
+            <i class="bx bx-menu" id="menu-icon" ></i>
+
+            <nav class="navbar">
+                <!-- Setting anchor tags to navigate between various pages and also various sections within this page  -->
+                <a href="#home" id="pages" class="active">Home</a>
+                <a href="about.html" id="pages" class="nav-anchor">About</a>
+                <a href="gallery.html" id="pages" class="nav-anchor">Gallery</a>
+                <a href="#about">Introduction</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <img src="assets/moon.png" id="icon" alt="dark Mode toggle">
+            </nav>
+
+        </header>
+        
+        <!-- home section -->
+        <section class="home" id="home">
+            <div class="home-content" data-aos="fade-down">
+
+                <h1>Hello, I’m <span>Kashish</span></h1>
+                <title>Text Typing Effect</title>
+
+                <body>
+                    <div id="text-container" class="border"></div>
+                </body>
+                <br>
+                <br>
+                <!-- Introduction -->
+                <p>
+                    I am working on developing professional and visually engaging web solutions. Currently pursuing my
+                    B.Tech in CSE at Seneca Polytechnic College, Canada. I am open to exciting opportunities in professional
+                    projects, research, and connecting with industry professionals.
+                </p>
+
+                <!-- Importing links to all social media platforms -->
+                <div class="social-media">
+                    <a href="https://github.com/Kashish-Thapar">
+                        <i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/kashish-thapar-71677128a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.facebook.com/">
+                        <i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.instagram.com/kashhh.25/">
+                        <i class='fab fa-instagram'></i></a>
+                    <a href="https://twitter.com/Kashish_Thapar1">
+                        <i class='bx bxl-twitter'></i></a>
+                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=kashishthapar25@gmail.com">
+                        <i class='bx bx-envelope'></i></a>
+                </div>
+                <div class="btn-container">
+                    <!-- Adding links to CV file and About Page -->
+                    <a href="assets/Resume.pdf" class="btn" id="download-btn">Download CV</a>
+                    <a href="about.html" class="btn" id="hire-me-btn">About</a>
+
+                </div>
+            </div>
+
+            <div class="home-img" data-aos="fade-down">
+                <img src="assets/pic1.png" alt="MyPic" id="picture">
+            </div>
+        </section>
+
+
+        <!-- About section -->
+        <section class="about" id="about">
+            <div class="about-img" data-aos="fade-left">
+                <img src="assets/x.jpeg" alt="MyPic" id="picture2">
+            </div>
+
+            <div class="about-content" data-aos="slide-left">
+                <!-- Adding Main Content of About Me Section -->
+                <h2 class="heading">About <span>Me</span></h2>
+                <p>I am an amateur in the Web Developer field and have a deep enthusiasm for technology
+                    that are both aesthetically pleasing and highly functional.
+                    I am trying in building projects that are user-friendly and have attractive interfaces. I am
+                    proficient in a range of programming language including Java and C++.</p>
+
+                <div class="tab-titles" data-aos="fade-left">
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('metric')">Metric</p>
+                </div>
+
+                <!-- Adding education info -->
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-Present</span><br>Seneca Polytechnic College <br>Greater Toronto Area, Canada</li>
+                </div>
+                <div class="tab-contents" id="metric">
+                    <ul>
+                        <li><span>10th</span><br>MMI School, Sadopur, Haryana<br>95%</li>
+                        <li><span>12th</span><br>MMI School, Sadopur, Haryana<br>76% (PCM)</li>
+                </div>
+        </section>
+
+        <!-- Skills section -->
+
+        <section id="skills" class="services">
+            <div class="ser-title">
+                <h2 class="heading">My <span>Skills</span></h2>
+            </div>
+            <div class="services-box" data-aos="fade-left">
+                <div class="box" data-aos="fade-left">
+                    <!-- Adding Computer Languages under my experience -->
+                    <h2 style="text-align:left;font-size:x-large;color:#fd4766;">Languages &nbsp; &nbsp;</h2>
+                    <div>
+                        <figure class="item" style="display:inline-block;">
+                            <a href="https://www.cprogramming.com" target="_blank" rel="noreferrer"> <img
+                                    src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/c.svg" alt="c"
+                                    width="40" height="40" /> </a>
+                            <figcaption style="text-align:center;"><b>C</b></figcaption>
+                        </figure>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+                        <figure class="item" style="display:inline-block;">
+                            <a href="https://www.cplusplus.com" target="_blank" rel="noreferrer"> <img
+                                    src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/cplusplus.svg"
+                                    alt="cplusplus" width="40" height="40" /> </a>
+                            <figcaption style="text-align:center;"><b>C++</b></figcaption>
+                        </figure>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+                        <figure class="item" style="display:inline-block;">
+                            <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img
+                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                                    alt="python" width="40" height="40" /> </a>
+                            <figcaption style="text-align:center;"><b>Python</b></figcaption>
+                        </figure>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+                        <figure class="item" style="display:inline-block;">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                                rel="noreferrer"> <img
+                                    src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                    alt="javascript" width="40" height="40" /> </a>
+                            <figcaption style="text-align:center;"><b>JavaScript</b></figcaption>
+                        </figure>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+
+                        <figure class="item" style="display:inline-block;">
+                            <a href="https://www.java.com/en/" target="_blank" rel="noreferrer"> <img src="assets/java.svg"
+                                    alt="Java" width="40" height="40" /> </a>
+                            <figcaption style="text-align:center;"><b>Java</b></figcaption>
+                        </figure>
+                        &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    </div>
+                </div>
+
+                <div class="box" data-aos="slide-right">
+                    <h2 style="text-align:left;font-size:x-large;color:#fd4766;">Technologies &nbsp; &nbsp;</h2>
+
+
+
+                    <figure class="item" style="display:inline-block;">
+                        <a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img
+                                src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/git.svg" alt="git"
+                                width="40" height="40" /> </a>
+                        <figcaption style="text-align:center;"><b>Git</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+                    <figure class="item" style="display:inline-block;">
+                        <a href="https://www.linux.org" target="_blank" rel="noreferrer"> <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                                alt="linux" width="40" height="40" /> </a>
+                        <figcaption style="text-align:center;"><b>Linux</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+
+
+                <div class="box" data-aos="fade-left">
+                    <!-- Adding Language Libraries(Python) -->
+                    <h2 style="text-align:left;font-size:x-large;color:#fd4766;">Libraries &nbsp; &nbsp;</h2>
+
+                    <figure class="item" style="display:inline-block;">
+                        <a href="https://numpy.org" target="_blank" rel="noreferrer"> <img
+                                src="https://raw.githubusercontent.com/arasgungore/arasgungore/main/icons/numpy.svg"
+                                alt="numpy" width="40" height="40" /> </a>
+                        <figcaption style="text-align:center;"><b>NumPy</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+
+                    <figure class="item" style="display:inline-block;">
+                        <a href="https://pandas.pydata.org" target="_blank" rel="noreferrer"> <img
+                                src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"
+                                alt="pandas" width="40" height="40" /> </a>
+                        <figcaption style="text-align:center;"><b>Pandas</b></figcaption>
+                    </figure>
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                </div>
+        </section>
+
+        <!-- portfolio section -->
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Last <span>Projects</span></h2>
+            <div class="portfolio-container" data-aos="fade-right">
+
+                <div class="portfolio-card">
+
+                    <img src="assets/project1.jpg" alt="Project 1 pic">
+                    <div class="portfolio-details" data-aos="fade-right">
+                        <!-- Adding first project -->
+                        <h3>PORTFOLIO- <span>WEBSITE</span></h3>
+                        <p>The Portfolio website is a personal welcome screen that can be used to showcase your skills and
+                            fluency in any language. You can provide a link to your resume in this website, can leave a
+                            contact form at the end so that the recruiter can contact you if he/she is interested in your
+                            profile.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" id="cardOP">
+                    <img src="assets/project2.png" alt="Project 2 pic" data-aos="fade-left">
+                    <div class="portfolio-details" data-aos="fade-left">
+                        <!-- Adding second project -->
+                        <h3>KBC: THE QUIZ <span>GAME</span></h3>
+                        <p>Successfully completed the KBC: The Quiz Game project, infused with Amitabh Bachchan Sir's voice.
+                            This project showcases a wide range of Python's topics, including lists, conditionals,
+                            functions, and the Pygame library. The incorporation of Amitabh Bachchan's voice adds an
+                            engaging and authentic touch to the game, making it a standout creation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- contact info section -->
+        <section class="contact" id="contact">
+            <h2 class="heading"> Contact <span>Me <i class='bx bx-message-dots'></i></span></h2>
+            <div class="wrapper">
+                <form id="form" class="form-area" onsubmit="return validateForm()"><!--Preventing default by calling validateForm() function in JS-->
+                        <fieldset class="pInfo"><legend class="legendForm"><span>Personal</span> info</legend><br><br>
+                            <div class="inputClass">
+                                <label for="FName" class="labels">
+                                    First Name:
+                                        <input type="text" name="FName" id="FName" placeholder="Your Name" oninput="typing()" ><!--typing() function used to play audio while typing-->
+                                </label>
+                                <span class="error"></span>
+                            </div>
+                            <br>
+                            <div class="inputClass">
+                                <label for="LName" class="labels">
+                                    Last Name:
+                                    <input type="text" name="LName" id="LName" placeholder="Your Last Name" oninput="typing()" >
+                                </label>
+                                <span class="error"></span>
+                            </div>
+                            <br>
+                            <div class="inputClass">
+                                <label for="Email" class="labels">
+                                    Email Add:&nbsp;
+                                    <input type="email" name="Email" id="Email" placeholder="Your Email Address" oninput="typing()" >
+                                </label>
+                                <span class="error"></span>
+                            </div>
+                        </fieldset>
+                        <fieldset class="msgblock">
+                            <legend class="legendForm"><span>Message</span> Block</legend>
+                            <div class="inputClass">
+                                <label for="Message" class="labels">
+                                    Message:
+                                    <textarea name="Message" id="Message" cols="30" rows="10" placeholder="Your Message" oninput="typing()" ></textarea>
+                                </label>
+                                <span class="error"></span>
+                            </div>
+                        </fieldset>
+                    <br>
+                    <div><button type="submit" value="Send Message" class="btn" id="submit">Submit</button></div>
+
+                    <!-- Creating the confirmation message box that is shown/hidden by JS -->
+                    <div class="confirmation" id="confirmation">
+                        <img src="assets/zamn.png" alt="Exclamation mark">
+                        <h2>Confirmation Message!</h2>
+                        <p class="content">Hey, <span class="confirmation-f"></span>, Your message has been sent successfully via the Email id: <span class="confirmation-f"></span></p>
+                        <button type="button" onclick="closepopup()">Close</button>
+                    </div>
+                    <script src="index.js"></script>
+                    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                    <script>
+                        AOS.init();
+                    </script>
+                </form>
+            </div>
+        </section>
+
+        <!--Footer section -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Made with <i style="color: red;" class="bx bx-heart"></i> by Kashish Thapar.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>
+<!-- HTML ends here -->

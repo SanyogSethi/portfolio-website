@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gallery</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="gallery.css">
+        <meta name="view-transition" content="same-origin" />
+    </head>
+    <body>
+        <!--  Header -->
+        <header class="header">
+            <a href="index.html" class="logo">Portfolio</a>
+            <i class="bx bx-menu" id="menu-icon" ></i>
+
+            <nav class="navbar">
+                <!-- Setting anchor tags to other pages, i.e., Homepage and About page  -->
+                <a href="index.html" id="pages" class="nav-anchor">Home</a>
+                <a href="about.html" id="pages" class="nav-anchor">About</a>
+                <img src="assets/moon.png" alt="DarkMode Toggle" id="icon">
+            </nav>
+        </header>
+
+        <!-- Gallery section  -->
+        <section class="content" id="content">
+            <h2>Gallery</h2>
+            <div class="container">
+                <!-- Adding images and text and aligning them in a grid layout -->
+                <div class="projects one">
+                    <img src="Assets/project1.jpg" alt="Portfolio" class="items" id="one">
+                    <div class="info"><span>Portfolio&nbsp;</span>Website</div>
+                </div>
+                <div class="projects two">
+                    <img src="Assets/project2.png" alt="KBC game" class="items" id="two">
+                    <div class="info"><span>KBC:&nbsp;</span> The game</div>
+                </div>
+                <div class="projects three">
+                    <img src="Assets/Project 3.jpg" alt="Face Recognition project" class="items" id="three">
+                    <div class="info"><span>Face Recognition&nbsp;</span> System</div>
+                </div>
+                <div class="projects four">
+                    <img src="Assets/Project 4.webp" alt="Chatbot" class="items" id="four">
+                    <div class="info"><span>Chatbot</span></div>
+                </div>
+                <div class="projects five">
+                    <img src="Assets/Project 5.png" alt="Restaurant Website" class="items" id="five">
+                    <div class="info"><span>Restaurant&nbsp;</span> Website</div>
+                </div>
+                <div class="projects six">
+                    <img src="Assets/publicspeakerr.jpg" alt="Communication skills" class="items" id="six">
+                    <div class="info"><span>Public &nbsp;</span> speaker</div>
+                </div>
+                <div class="projects seven">
+                    <img src="Assets/Project 7.jpg" alt="Online Bidding" class="items" id="seven">
+                    <div class="info"><span>Online Bidding&nbsp;</span> platform</div>
+                </div>
+                <div class="projects eight">
+                    <img src="Assets/Project 8.jpg" alt="Power optimization" class="items" id="eight">
+                    <div class="info"><span>Power optimization&nbsp;</span> app</div>
+                </div>
+                <div class="projects nine">
+                    <img src="Assets/Project 9.jpg" alt="Mobile Wallet project" class="items" id="nine">
+                    <div class="info"><span>Mobile&nbsp;</span>Wallet</div>
+                </div>
+                <div class="projects ten">
+                    <img src="Assets/Project 10.jpg" alt="Web Search project" class="items" id="ten">
+                    <div class="info"><span>Web-Search&nbsp;</span> app</div>
+                </div>
+            </div>
+        </section>
+
+    <!--Footer section -->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Made with <i style="color: red;" class="bx bx-heart"></i> by Kashish Thapar.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#content"><i class="bx bx-up-arrow-alt"></i></a>
+            </div>
+        </footer>
+
+        <script src="gallery.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+    </body>
+</html>

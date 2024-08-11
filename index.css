@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@font-face{
+    font-family: 'myFont';
+    src: url(assets/RemachineScript_Personal_Use.ttf);
+}/* Importing a font for anchor tags pointing to other pages */
+
+/* Styling some global settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+#icon{
+    width:30px;
+    cursor:pointer;
+    margin-left: 4rem;
+    padding-top: 2px;
+}
+/* Setting various colours to be used within the website  */
+:root {
+    --bg-color: #fff;
+    --seconde-bg-color: rgba(201, 207, 220, 0.933);
+    --text-color: #000;
+    --main-color: #fd4766;
+    --shadow-color: #808080;
+}
+/* Adding background and text colours to be switched between when toggling dark and light mode  */
+.dark-theme{
+    --text-color:white;
+    --bg-color:black;
+    --seconde-bg-color: rgb(50,45,33);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+body.fade-out {
+    opacity: 0;
+}
+/* Fade out effect for page transition */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Initially hide content */
+.hidden {
+    display: none;
+}
+
+section{
+    min-height: 75vh;
+    padding: 10rem 9% 2rem;
+}
+
+/*********header********/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header .sticky{
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 650;
+    cursor: pointer;
+}
+/******* Navigation Bar  *******/
+/* Making navbar visible in desktop view */
+.navbar {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: .3;
+}
+#pages{
+    font-family: myFont;
+    font-weight: 20;
+    font-size: 35px;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+    cursor: pointer;
+}
+
+span{
+    color: var(--main-color);
+}
+/* Hiding Navigation bar for burger menu */
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 5%; /* Adjust padding for smaller screens */
+        max-width: 100%;
+        width: fit-content;
+    }
+
+    #menu-icon {
+        display: block;
+        margin-left: 40vw;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+    }
+
+    .navbar a {
+        margin: 1rem 0;
+    }
+    /* making navbar visible when menu button is pressed by applying active class using js */
+    .navbar.active {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s 0s, opacity 0.5s ease-in-out;
+    }
+}
+
+
+/****** Home Section ******/
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Default image properties when the user doesn't hover on the image */
+.home-img img{
+    width: 32vw;
+    transition: 0.3s ease;
+   
+}
+/* The class manipulated using js */
+.img-mouseover{
+    transform: scale(1.05);
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+/* Setting font of text being printed using JS */
+#text-container {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    background: linear-gradient(120deg,#1c99fe 20.69%,#7644ff 50.19%,#fd4766 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }    
+}
+.border {
+    border-right: 2px solid #ffffff;
+    animation: typing 2s steps(40, end);
+}
+
+.home-content h1 {
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.8;
+}
+.home-content p {
+    font-size: 1.6rem;
+    margin-inline-end: 40%;
+}
+
+/****** Setting Social media icons ******/
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+    background: var(--main-color);
+    color: var(--seconde-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.btn-container .btn{
+    display: inline-block;
+    margin: 0 2rem 0 0;
+
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--shadow-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+#download-btn{
+    border: .2rem solid var(--main-color);
+    background: var(--bg-color);
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.btn:hover,#download-btn:hover{
+    box-shadow: none;
+}
+@media only screen and (max-width: 550px) {
+    #home {
+        margin-top: 100px;
+        flex-direction: column-reverse;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+        line-height: 1.4;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+        margin-inline-end: 0;
+    }
+
+    .home-img img {
+        width: 80vw;
+        margin-top: 2rem;
+    }
+
+    .social-media a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+        margin: 1rem 1rem 1rem 0;
+    }
+
+    .btn-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-container .btn {
+        margin: 0;
+    }
+}
+
+/*********************about******************/
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+/* Default image properties when the user doesn't hover on the image */
+.about-img img{
+    width: 28vw;
+    transition: 0.3s ease;
+   box-shadow: 3px 8px 6px 
+   #00000075;
+   border-radius: 2%;
+}
+/* The class manipulated using js */
+.zoomin-class{
+    transform: scale(1.05);
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3 {
+    font-size: 2.6rem;
+    margin: 1.6rem 0;
+}
+.about-content p {
+    font-size: 1.6rem;
+    margin: 1rem 3rem 3rem 0;
+}
+
+.tab-titles{
+    display:flex;
+    margin:20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size:18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content:'';
+    width:0;
+    height:3px;
+    background: #fd4766;;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width:50%;
+}
+.tab-contents ul li{
+    margin: 10px 0 ;
+}
+.tab-contents ul li{
+    font-size: small;
+}
+
+.tab-contents ul li span{
+    color:#ef306d;
+    font-size:medium;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+@media only screen and (max-width: 550px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .about-img img {
+        width: 80%;
+        margin-bottom: 2rem;
+        box-shadow: 3px 8px 6px #00000075;
+        border-radius: 2%;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .about-content p {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .tab-links {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: #fd4766;
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        transition: 0.5s;
+        transform: translateX(-50%);
+    }
+
+    .tab-links.active-link::after {
+        width: 50%;
+    }
+
+    .tab-contents ul li {
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    .tab-contents ul li span {
+        color: #ef306d;
+        font-size: 1.4rem;
+    }
+}
+
+/**********************skills section****************/
+.box{
+    background-color: rgba(201, 207, 220, 0.933);
+    padding: 23px;
+    border-radius: 5px;
+    width: 600px;
+    margin: 35px;
+    transition: ease-in-out 0s;
+    flex-wrap: wrap;
+    display: flex;
+    background: var(--seconde-bg-color);
+}
+.services {    
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.services-box{
+    padding-left: 24%;
+}
+.box img{
+    transition: 0.3s ease;
+    width: 50px; 
+    height: 50px;
+}
+.box img:hover{
+    transform: scale(1.22);
+}
+.box{
+    transition: 0.3s ease;
+} 
+.box:hover{
+    transform: scale(1.05);
+}
+.box b{
+    color:  var(--text-color);
+}
+@media only screen and (max-width: 550px) {
+    .services {
+        padding: 1rem;
+    }
+
+    .services-box {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 100%;
+        margin: 1rem 0;
+        padding: 1rem;
+    }
+
+    .box img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .box h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .box figure {
+        display: block;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .box figure figcaption {
+        font-size: 1rem;
+    }
+}
+
+
+/***********portfolio section****************/
+.portfolio h2 {
+    margin-bottom: 2rem;
+}
+.portfolio {
+    padding: 10rem 9% 5rem;
+}
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.portfolio-container .portfolio-card {
+    flex: 1 1 30rem;
+    color: black;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+
+}
+.transformation-class{ /*Class made for scaling project cards , manipulated using JS */
+    border: .2rem solid #fd4766;
+    border-color: #d64949;
+    transform: scale(1.13);
+}
+.portfolio-card h3 {
+    font-size: 2rem;
+    color:  var(--text-color);
+}
+.portfolio-card img {
+    width: 80%;
+    height: 50%;
+    margin: 2rem 0;
+
+}
+
+.portfolio-details p{
+   font-size: larger;
+   color:  var(--text-color);
+}
+
+ .portfolio-card .btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* Mobile view ettings */
+@media only screen and (max-width: 550px) {
+    .portfolio {
+        padding: 5rem 2%;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-container .portfolio-card {
+        width: 90%;
+        padding: 2rem 1rem;
+        margin: 1rem 0;
+        flex: 1 1 auto;
+    }
+
+    .portfolio-card img {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .portfolio-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .portfolio-details p {
+        font-size: 1.4rem;
+        text-align: justify;
+    }
+}
+
+/*********** Contact section **********/
+.contact {
+    height: fit-content;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 10%;
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+/* Setting form design */
+.contact form {
+    width: 70rem;
+    margin: 1rem 0px;
+    text-align: left;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* To make its position reference for the confirmation box */
+}
+
+.contact form .labels {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.contact form .legendForm {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Designing input boxes in forms */
+.contact form input {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.6rem;
+    background: var(--seconde-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form textarea {
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--seconde-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+/* Making focus and blur class to add highlighting effects in form fields and manipulating using JS */
+.focus {
+    width: fit-content;
+    padding: 1.4rem;
+    font-size: 1.6rem;
+    color: #fd4766;
+    background: var(--seconde-bg-color);
+    border-radius: 0.8rem;
+    margin: .7rem .7rem;
+    border: 1.4px solid #d66f82;
+    transition: 0.5s;
+}
+
+.blur {
+    width: fit-content;
+    padding: 1.4rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--seconde-bg-color);
+    border-radius: .8rem;
+    margin: .7rem .7rem;
+    transition: 0.7s;
+}
+
+/* Setting error message font size and red color */
+.contact .form-area .pInfo .inputClass .error {
+    color: #d64949;
+}
+
+.contact form .error {
+    font-size: 1.6rem;
+}
+
+/* Confirmation box */
+.confirmation {
+    width: 400px;
+    background: #fcfcde;
+    border-radius: 6px;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 101; /* To ensure that it apears above other elements */
+}
+
+/* Showing confirmation if form is validated properly (Using JS) */
+.show-confirmation {
+    top: 40%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
+
+.confirmation img {
+    height: 150px;
+    width: 150px;
+    margin-top: -20%;
+    background: #f1afaf;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.confirmation h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 20px 0px 10px;
+}
+
+.confirmation button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #d64949;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.confirmation .content {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    cursor: pointer;
+    display: block;
+    margin: 1rem 0;
+    width: 100%;
+}
+/* Mobile layout of form */
+@media (max-width: 768px) {
+    .contact {
+        padding: 2rem 0;
+    }
+    
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .contact form {
+        width: 100%;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .contact form .labels, .contact form {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    .legendForm {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .contact form input, .contact form textarea {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .contact form .btn {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .confirmation {
+        width: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+
+    .show-confirmation {
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+    }
+}
+
+
+
+/******footer********/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color: var(--seconde-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+    color:  var(--text-color);
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+/**********************Some necessary media queries for adding final touch to mobile layout****************/
+@media only screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img img {
+        width: 80%;
+    }
+    .about-content {
+        margin-top: 2rem;
+    }
+    .services-box {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .portfolio-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    .section {
+        padding: 10rem 0% 2rem;
+    } 
+    .footer {
+        padding: 2rem  3%;
+    }
+}
+
+@media (max-width:1048px){
+    .header{
+        font-size: 32px;
+        padding-left:60px;
+    }
+    .navbar a {
+        margin-right:20x; 
+        font-size:17px ;
+    }
+}
+
+/* CSS ends here */
